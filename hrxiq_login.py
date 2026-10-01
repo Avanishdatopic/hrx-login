@@ -451,7 +451,7 @@ def login():
             session.driver.get(DASHBOARD_URL)
             time.sleep(2)
 
-        check_pause_every_half_hour(session)
+        run_one_pause_check(session, label="Check right after login")
     except KeyboardInterrupt:
         print("\nScript user ne band ki (Ctrl+C)")
     except Exception as e:
